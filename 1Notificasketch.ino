@@ -12,8 +12,8 @@
 #define DHTTYPE DHT22   // DHT 22 (AM2302)
 DHT dht(DHTPIN, DHTTYPE);
 // Sostituisci con i tuoi dati di rete
-const char* ssid = "TIM-72204652";
-const char* password = "9DDcNQZhxUDSSzezGcUdfuuu";
+const char* ssid = "";
+const char* password = "";
 // Chiavi API di Pushover
 const char* pushoverUserKey = "ubgwth6sp27sxcgcb9ha7xdoo6vdtn";
 const char* pushoverApiToken = "a43r47bd8ohkhmzjiq3gppf4wumxph";
