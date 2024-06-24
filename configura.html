@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configura Scompartimenti</title>
+<style>
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px; 
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+  .compartment {
+    width: 45%;
+  }
+  input[type="text"], input[type="number"], input[type="time"], input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+  button:hover {
+    background-color: #005f73;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="compartment">
+    <h2>Configura Scompartimento 1</h2>
+    <form name="compartment1" action="back.php" method="post">
+      <input type="text" name="nome" placeholder="Nome del medicinale">
+      <input type="number" name="numero_pillole_rimanenti" placeholder="Numero di pillole" min="1">
+      <input type="number" name="temp_ideale" placeholder="Temperatura ideale" min="1">
+      <input type="time" name="orario_reale" placeholder="Orario di assunzione">
+      <input type="date" name="data_scadenza" placeholder="Data di scadenza">
+      <input type="hidden" name="scompartimento" value="1"> <!-- Campo nascosto per scompartimento 1 -->
+      <input type="submit" name="send" value="Salva"/>
+    </form>
+  </div>
+
+  <div class="compartment">
+    <h2>Configura Scompartimento 2</h2>
+    <form name="compartment2" action="back.php" method="post">
+      <input type="text" name="nome" placeholder="Nome del medicinale">
+      <input type="number" name="numero_pillole_rimanenti" placeholder="Numero di pillole" min="1">
+      <input type="number" name="temp_ideale" placeholder="Temperatura ideale" min="1">
+      <input type="time" name="orario_reale" placeholder="Orario di assunzione">
+      <input type="date" name="data_scadenza" placeholder="Data di scadenza">
+      <input type="hidden" name="scompartimento" value="2"> <!-- Campo nascosto per scompartimento 2 -->
+      <input type="submit" name="send" value="Salva"/>
+    </form>
+  </div>
+</div>
+</body>
+</html>
